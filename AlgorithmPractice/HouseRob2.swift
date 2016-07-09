@@ -1,4 +1,14 @@
 //
+//  HouseRob2.swift
+//  AlgorithmPractice
+//
+//  Created by administrasion on 7/9/16.
+//  Copyright © 2016 NJU. All rights reserved.
+//
+
+import Foundation
+
+//
 //  HouseRob.swift
 //  AlgorithmPractice
 //
@@ -7,14 +17,14 @@
 //
 
 import Foundation
-class Solution {
+class HouseRob2 {
     var cache = [Int: Int]()
     
     func rob(nums: [Int]) -> Int {
         if nums.count == 1 {
             return nums[0]
         }
-//        return max(maxRobValue(nums, start: 0, end: nums.count - 1), maxRobValue(nums, start: 1, end: nums.count))
+        //        return max(maxRobValue(nums, start: 0, end: nums.count - 1), maxRobValue(nums, start: 1, end: nums.count))
         return max(rob2(nums, start: 0 , end: nums.count - 1), rob2(nums, start: 1 , end: nums.count))
     }
     
